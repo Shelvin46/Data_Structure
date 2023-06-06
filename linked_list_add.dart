@@ -4,29 +4,27 @@ void main(List<String> args) {
     addNode(a[i]);
   }
   //largestNumber();
-  
+
   remoneDuplicate();
   display();
-
 }
 
 class ListNode {
   int? val;
   ListNode? next;
-  ListNode(int val) {
-    this.val = val;
-  }
+
+  ListNode({required this.val});
 }
 
 ListNode? head = null;
 ListNode? tail = null;
 //adding new node
 void addNode(int data) {
-  ListNode newNode = new ListNode(data);
+  ListNode newNode = new ListNode(val: data);
   if (head == null) {
     head = newNode;
   } else {
-   tail?.next = newNode;
+    tail?.next = newNode;
   }
   tail = newNode;
 }
@@ -60,6 +58,7 @@ void delete(int data) {
   if (temp == null) {
     return;
   }
+  //1346
   //deleting tail
   if (temp == tail) {
     tail = prev;
@@ -68,9 +67,10 @@ void delete(int data) {
   }
   prev?.next = temp.next;
 }
+
 //inserting element after specfied element
 void insertion(int nextTo, int data) {
-  ListNode newNode = ListNode(data);
+  ListNode newNode = ListNode(val: data);
   ListNode? temp = head;
   while (temp != null && temp.val != nextTo) {
     temp = temp.next;
@@ -86,6 +86,7 @@ void insertion(int nextTo, int data) {
   newNode.next = temp.next;
   temp.next = newNode;
 }
+
 void remoneDuplicate() {
   ListNode? current = head;
   // while (current != null) {
@@ -114,8 +115,9 @@ void remoneDuplicate() {
     current = nextTo;
   }
 }
+
 void middleElement(int data) {
-  ListNode? newNode = ListNode(data);
+  ListNode? newNode = ListNode(val: data);
   int count = 0;
   double a = 0;
   int counter = 0;
@@ -140,6 +142,7 @@ void middleElement(int data) {
     tenp1 = tenp1.next;
   }
 }
+
 void decimaltoBinary() {
   ListNode? temp = head;
   String val = '';
@@ -153,6 +156,9 @@ void decimaltoBinary() {
 
 void largestNumber() {
   ListNode? temp = head;
+  if (temp == null) {
+    return;
+  }
   int count = 0;
   while (temp != null) {
     if (temp.val! > count) {
@@ -162,4 +168,3 @@ void largestNumber() {
   }
   print(count);
 }
-
