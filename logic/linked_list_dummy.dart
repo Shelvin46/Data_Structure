@@ -17,10 +17,13 @@ void main() {
   addingNode(12);
   addingNode(7);
   addingNode(3);
-  middleElement();
   removeDuplicates();
+  sortLinkedList();
+  // display();
+  // middleElement();
+
   // reversedLinkedList();
-  largest();
+  // largest();
 }
 
 void addingNode(int data) {
@@ -153,3 +156,7 @@ void largest() {
   ListNode value;
   ListNode? temp = head;
 }
+
+
+//4-->5-->3-->10-->7-->11-->12==3,4,5,7,10,11,12
+void sortLinkedList() {}
