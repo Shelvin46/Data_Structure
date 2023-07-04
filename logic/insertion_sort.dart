@@ -9,7 +9,6 @@ void insertionSort(List<int> values) {
   for (int i = 1; i <= values.length - 1; i++) {
     int current = values[i];
     int j = i - 1;
-
     while (j >= 0 && values[j] > current) {
       values[j + 1] = values[j];
       j--;
@@ -18,3 +17,5 @@ void insertionSort(List<int> values) {
   }
   print(values);
 }
+
+var arr = [4, 53, 6, 7, 8, 3, 9, 3];

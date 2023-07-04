@@ -3,10 +3,8 @@ class ListNode {
   ListNode? next;
   ListNode({required this.value});
 }
-
 ListNode? head = null;
 ListNode? tail = null;
-
 void main() {
   addingNode(4);
   addingNode(5);
@@ -17,10 +15,8 @@ void main() {
   addingNode(12);
   addingNode(7);
   addingNode(3);
-  removeDuplicates();
-  sortLinkedList();
-  // display();
-  // middleElement();
+  display();
+  middleElement();
 
   // reversedLinkedList();
   // largest();
@@ -93,29 +89,13 @@ void insertion(int nextTo, int data) {
 }
 
 void middleElement() {
-  dynamic middleCount = 0;
-  dynamic forCount = 0;
-  dynamic finalCount = 0;
-  ListNode? temp = head;
   ListNode? temp1 = head;
-  while (temp != null) {
-    middleCount++;
-    temp = temp.next;
+  ListNode? temp2 = head;
+  while (temp2 != null && temp2.next != null) {
+    temp1 = temp1?.next;
+    temp2 = temp2.next?.next;
   }
-  if (middleCount.isEven) {
-    forCount = middleCount / 2;
-  } else {
-    forCount = (middleCount + 1) / 2;
-  }
-  // print(forCount);
-  while (temp1 != null) {
-    finalCount++;
-    if (forCount == finalCount) {
-      // print(temp1.value);
-      return;
-    }
-    temp1 = temp1.next;
-  }
+  print(temp1?.value);
 }
 
 void removeDuplicates() {
@@ -137,6 +117,7 @@ void removeDuplicates() {
 }
 
 void reversedLinkedList() {
+  //4-->5-->3-->7-->10-->11-->12-->7-->3
   ListNode? prev = null;
   ListNode? temp = head;
   while (temp != null) {
@@ -156,7 +137,6 @@ void largest() {
   ListNode value;
   ListNode? temp = head;
 }
-
 
 //4-->5-->3-->10-->7-->11-->12==3,4,5,7,10,11,12
 void sortLinkedList() {}

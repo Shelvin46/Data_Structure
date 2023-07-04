@@ -1,13 +1,17 @@
 void main(List<String> args) {
+  insert(25);
+  insert(20);
+  insert(36);
   insert(10);
-  insert(8);
-  insert(11);
-  insert(4);
-  insert(9);
-  // inOrder();
-  // print("");
-  // preOrder();
-  print(findClosest(12));
+  insert(22);
+  insert(30);
+  insert(40);
+  insert(5);
+  insert(12);
+  insert(38);
+  insert(48);
+  insert(39);
+  removeElement(39);
 }
 
 class BinarySearchTree {
@@ -60,7 +64,7 @@ bool valueContanins(dynamic data) {
 }
 
 void removeElement(dynamic data) {
-  removeHelper(data, root!, null);
+  removeHelper(data, root, null);
 }
 
 void removeHelper(

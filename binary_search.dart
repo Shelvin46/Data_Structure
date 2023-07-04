@@ -12,6 +12,8 @@ int binarySearch(List<int> array, int target) {
 
   while (startIndex <= lastIndex) {
     int middle = (startIndex + lastIndex) ~/ 2;
+    // print(middle);
+
     if (array[middle.toInt()] == target) {
       return middle;
     } else if (array[middle] > target) {

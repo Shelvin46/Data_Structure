@@ -4,7 +4,6 @@ void main() {
 }
 
 void bubbleSort(List<int> values) {
-  // for(int i=0;i)
   for (int i = 0; i < values.length; i++) {
     for (int j = 0; j < values.length - i - 1; j++) {
       if (values[j] > values[j + 1]) {

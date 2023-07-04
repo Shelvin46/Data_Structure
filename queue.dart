@@ -22,6 +22,7 @@ class queueNode {
 queueNode? front;
 queueNode? rear;
 void enQueue(int data) {
+  // adding data into queue.
   queueNode newNode = queueNode(data);
   if (rear == null) {
     front = rear = newNode;
@@ -43,12 +44,10 @@ void deQueue() {
 
 void display() {
   queueNode? current = front;
-  // if (rear == null) {
-  //   print('Queue Underflow');
-  //   return;
-  // } else {
   while (current != null) {
     print(current.data);
     current = current.next;
   }
 }
+
+// Set a = {};

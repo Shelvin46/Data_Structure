@@ -1,3 +1,5 @@
+import 'logic/MinHeap/min_heap.dart';
+
 class MinHeap {
   List<int> heap = [];
 

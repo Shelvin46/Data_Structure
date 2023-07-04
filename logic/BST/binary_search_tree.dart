@@ -169,4 +169,3 @@ void findLowestAndHighest() {
   }
   print(forLowest?.data);
 }
-g

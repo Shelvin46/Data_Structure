@@ -8,6 +8,5 @@ int factorial(int n) {
   } else {
     print(n);
     return n * factorial(n - 1); // Recursive case
-
   }
 }

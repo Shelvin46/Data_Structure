@@ -1,5 +1,5 @@
 void main(List<String> args) {
-  List<int> array = [ 2, 41, 56, 12, 11, 22, 41];
+  List<int> array = [2, 41, 56, 12, 11, 22, 41];
   List<int> results = quickSort(array);
   for (var i = 0; i < results.length; i++) {
     print(results[i]);
@@ -13,6 +13,7 @@ List<int> quickSort(List<int> array) {
 
 void quickSortHelper(List<int> array, int startIdx, int endIdx) {
   //here the array containing only one element so we cant sort
+  print(endIdx);
   if (startIdx >= endIdx) {
     return;
   }
@@ -39,6 +40,7 @@ void quickSortHelper(List<int> array, int startIdx, int endIdx) {
   //value is also lessthan pivot value then we will understand the pivot vaue must be placed on that place.
   //for that we need to swap the values
   swap(array, rightIdx, pivot);
+  // print(rightIdx);
   quickSortHelper(array, startIdx, rightIdx - 1);
   quickSortHelper(array, rightIdx + 1, endIdx);
 }
